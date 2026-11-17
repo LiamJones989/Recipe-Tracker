@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>My Recipe Finder</h1>
+            <p>Your kitchen, your ingredients, your recipes.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INGREDIENT INVENTORY -->
+        <section class="panel">
+            <h2>My Ingredients</h2>
+            <p>Add everything you have in your kitchen, including spices and seasonings.</p>
+
+            <form id="ingredientForm">
+                <input
+                    type="text"
+                    id="ingredientInput"
+                    placeholder="Example: Chicken, garlic, paprika..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Add Ingredient</button>
+            </form>
+
+            <div id="ingredientCount">0 ingredients saved</div>
+
+            <div id="ingredientList" class="ingredient-list">
+                <p class="empty-message">Your ingredients will appear here.</p>
+            </div>
+
+            <button id="clearIngredients" class="secondary-button">
+                Clear All Ingredients
+            </button>
+        </section>
+
+        <!-- RECIPE SEARCH -->
+        <section class="panel search-panel">
+            <div>
+                <h2>Find My Recipes</h2>
+                <p>Search online for recipes based on the ingredients you have.</p>
+            </div>
+
+            <button id="findRecipes">
+                Find Recipes Online
+            </button>
+
+            <p id="searchStatus" class="status"></p>
+        </section>
+
+        <!-- FAVORITES -->
+        <section class="recipe-section">
+            <div class="section-heading">
+                <div>
+                    <h2>My Favorite Recipes</h2>
+                    <p>Recipes you have saved for later.</p>
+                </div>
+                <span class="section-count" id="favoriteCount">0</span>
+            </div>
+
+            <div id="favoriteRecipes" class="recipe-grid">
+                <p class="empty-message">You haven't saved any favorite recipes yet.</p>
+            </div>
+        </section>
+
+        <!-- READY TO COOK -->
+        <section class="recipe-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Ready to Cook</h2>
+                    <p>Recipes you have all the ingredients for!</p>
+                </div>
+                <span class="section-count" id="readyCount">0</span>
+            </div>
+
+            <div id="readyRecipes" class="recipe-grid">
+                <p class="empty-message">Search for recipes to see what you can make.</p>
+            </div>
+        </section>
+
+        <!-- OTHER RECIPES -->
+        <section class="recipe-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Other Recipes</h2>
+                    <p>Recipes you could make with just a few more ingredients.</p>
+                </div>
+                <span class="section-count" id="otherCount">0</span>
+            </div>
+
+            <div id="otherRecipes" class="recipe-grid">
+                <p class="empty-message">Other matching recipes will appear here.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>My Recipe Finder | Powered by TheMealDB</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
