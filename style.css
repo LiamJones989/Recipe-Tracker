@@ -1,0 +1,283 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #252525;
+    line-height: 1.5;
+}
+
+header {
+    background: #263b32;
+    color: white;
+    padding: 35px 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #d6e4dc;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.panel h2 {
+    margin-bottom: 5px;
+}
+
+.panel > p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+#ingredientForm {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    background: #347a54;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #265e3f;
+}
+
+#ingredientCount {
+    font-size: 13px;
+    color: #777;
+    margin: 20px 0 10px;
+}
+
+.ingredient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    min-height: 35px;
+}
+
+.ingredient-tag {
+    background: #e6f3e9;
+    color: #285e3d;
+    border-radius: 20px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.remove-ingredient {
+    background: none;
+    color: #285e3d;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.remove-ingredient:hover {
+    background: none;
+    color: red;
+}
+
+.secondary-button {
+    margin-top: 20px;
+    background: #e8e8e8;
+    color: #444;
+}
+
+.secondary-button:hover {
+    background: #d5d5d5;
+}
+
+.search-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-panel p {
+    margin-bottom: 0;
+}
+
+.status {
+    color: #347a54;
+    font-size: 13px;
+}
+
+.recipe-section {
+    margin: 40px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+.section-count {
+    background: #e6f3e9;
+    color: #285e3d;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.recipe-content {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.recipe-content p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.recipe-content .missing {
+    color: #b45c28;
+}
+
+.recipe-content .available {
+    color: #347a54;
+}
+
+.recipe-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.recipe-actions button {
+    flex: 1;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.favorite-button {
+    background: #a14c5b;
+}
+
+.favorite-button:hover {
+    background: #803b48;
+}
+
+.view-button {
+    background: #354f70;
+}
+
+.view-button:hover {
+    background: #263b55;
+}
+
+.empty-message {
+    color: #888;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    padding: 30px 0;
+}
+
+@media (max-width: 650px) {
+    #ingredientForm {
+        flex-direction: column;
+    }
+
+    .search-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-panel button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
